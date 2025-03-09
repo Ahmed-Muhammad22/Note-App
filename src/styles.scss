@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import 'ngx-toastr/toastr';
+.btn-main {
+  @apply bg-sky-600 px-6 py-2 rounded text-white hover:bg-sky-800 transition-colors duration-500 disabled:cursor-not-allowed disabled:bg-gray-600;
+}
+.btn-outlier {
+  @apply border border-sky-600 text-sky-600 px-6 py-2 rounded hover:text-white hover:bg-sky-600 transition-colors duration-500;
+}
+.btn-warning {
+  @apply border border-yellow-500 text-yellow-500 px-6 py-2 rounded hover:text-white hover:bg-yellow-500 transition-colors duration-500;
+}
+.btn-danger {
+  @apply border border-red-500 text-red-500 px-6 py-2 rounded hover:text-white hover:bg-red-500 transition-colors duration-500;
+}
