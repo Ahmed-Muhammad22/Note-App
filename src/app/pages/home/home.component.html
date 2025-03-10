@@ -13,7 +13,7 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-5 gap-5">
       @for (note of notes | search : term ; track note._id) {
-      <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
+      <div class="max-w-sm h-[400px] bg-gray-200 border border-gray-200 rounded-lg shadow-sm">
         <div class="p-5">
 
           <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-600 ">{{note.title}}</h5>

@@ -46,7 +46,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platId)) {
-      if (localStorage.getItem('userToken') !== null) {
+      if (localStorage.getItem('token') !== null) {
         this.getAllNotes();
       }
     }
