@@ -13,21 +13,21 @@
 
     <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-5 gap-5">
       @for (note of notes | search : term ; track note._id) {
-      <div class="max-w-sm h-[400px] bg-gray-200 border border-gray-200 rounded-lg shadow-sm">
-        <div class="p-5">
-
-          <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-600 ">{{note.title}}</h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{note.content}}</p>
-          <div class="flex gap-4">
-            <button (click)="showModel();setFormPatch(note, note._id)" class="btn-warning" type="button">
-              Update
-            </button>
-            <button (click)=" deleteSpecificNote(note._id)" class="btn-danger">
-              Delete
-            </button>
-          </div>
+      <div class="max-w-sm min-h-[400px] bg-gray-200 border border-gray-200 rounded-lg shadow-sm flex flex-col">
+        <div class="p-5 flex flex-col flex-grow">
+          <h5 class="mb-2 text-2xl font-medium tracking-tight text-gray-600">{{note.title}}</h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 flex-grow">{{note.content}}</p>
+        </div>
+        <div class="p-5 flex gap-4 mt-auto">
+          <button (click)="showModel();setFormPatch(note, note._id)" class="btn-warning" type="button">
+            Update
+          </button>
+          <button (click)="deleteSpecificNote(note._id)" class="btn-danger">
+            Delete
+          </button>
         </div>
       </div>
+
       }
 
 
